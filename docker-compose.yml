@@ -3,7 +3,7 @@ version: '3.8'
 services:
   postgres:
     image: postgres:14
-    container_name: postgres
+    container_name: postgres12
     restart: always
     environment:
       POSTGRES_USER: postgres
@@ -17,7 +17,7 @@ services:
 
   backend:
     build: ./Backend
-    container_name: backend
+    container_name: backend1
     restart: always
     ports:
       - "3002:3002"
@@ -26,7 +26,7 @@ services:
 
   employee-claims:
     build: ./Employee-claims
-    container_name: employee-claims
+    container_name: employee-claims1
     restart: always
     ports:
       - "8003:80"
@@ -34,8 +34,7 @@ services:
       - backend
 
   hr-claims:
-    build: ./HR-claims
-    container_name: hr-claims
+    build: ./HR-claims 
     restart: always
     ports:
       - "8004:80"
