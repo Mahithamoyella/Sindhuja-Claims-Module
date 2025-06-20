@@ -2,7 +2,7 @@ const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
 const app = express();
-const port = 3002;
+const port = 3051;
 
 // PostgreSQL database connection configuration
 const pool = new Pool({
